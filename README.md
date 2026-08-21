@@ -1,1 +1,245 @@
-# checked-on-you-twice-this-week-now
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Habit of Fine</title>
+  <style>
+    :root {
+      --bg-dark: #080d1a;
+      --card-bg: rgba(17, 24, 39, 0.7);
+      --accent-rose: #f43f5e;
+      --accent-amber: #fbbf24;
+      --accent-teal: #2dd4bf;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border-line: rgba(244, 63, 94, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(244, 63, 94, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(45, 212, 191, 0.1) 0%, transparent 45%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .title-quote {
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1.4;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-rose) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-line);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .glass-card h2 {
+      color: var(--accent-amber);
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .glass-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 1.02rem;
+    }
+
+    .interactive-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border-line);
+      border-radius: 14px;
+      padding: 1.8rem;
+    }
+
+    .lie-toggle-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-rose), #e11d48);
+      border: none;
+      color: #fff;
+      padding: 0.85rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      margin-bottom: 1.2rem;
+    }
+
+    .lie-toggle-btn:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .statement-box {
+      padding: 1.2rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid var(--accent-teal);
+      line-height: 1.6;
+      color: var(--text-main);
+      transition: all 0.3s ease;
+    }
+
+    .statement-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-teal);
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .reflection-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .reflection-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .reflection-list li::before {
+      content: "—";
+      color: var(--accent-rose);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .helpline {
+      margin-top: 1.2rem;
+      display: inline-block;
+      padding: 0.75rem 1.2rem;
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      border-radius: 20px;
+      color: var(--accent-rose);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1 class="title-quote">"Am I really okay, or am I just getting better at lying about me being okay?"</h1>
+      <p class="subtitle">Examining the reflex of self-deception and the quiet art of emotional survival.</p>
+    </header>
+
+    <main>
+      <section class="glass-card">
+        <h2>The Reflexive Lie</h2>
+        <p>
+          "I’m fine" stops being a simple phrase and becomes an automatic shield. When you repeat it long enough, it stops feeling like a lie and starts feeling like courtesy. You lie to keep from making things awkward, to protect people from worrying, and eventually to convince yourself that you aren't falling apart.
+        </p>
+      </section>
+
+      <section class="glass-card interactive-card">
+        <h2>The Script vs. The Truth</h2>
+        <p style="margin-bottom: 1.2rem;">Click below to reveal what sits beneath the polite surface.</p>
+        
+        <button class="lie-toggle-btn" onclick="toggleLie()">Flip The Script</button>
+
+        <div id="scriptBox" class="statement-box">
+          <span id="label" class="statement-label">What You Say Out Loud</span>
+          <p id="content">"I'm just a little tired today, but I've got a lot going on so it's all good!"</p>
+        </div>
+      </section>
+
+      <section class="glass-card">
+        <h2>How Lying Becomes Second Nature</h2>
+        <ul class="reflection-list">
+          <li><strong>Practiced Composure:</strong> Smiling automatically before your brain even processes how your body actually feels.</li>
+          <li><strong>Emotional Isolation:</strong> Realizing that if you stopped pretending, you wouldn't even know where to start explaining what's wrong.</li>
+          <li><strong>The Solitary Crash:</strong> Feeling an overwhelming weight land the exact moment you lock your bedroom door and step off the stage.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Recognizing the lie is the first step toward needing it less.</p>
+      <div class="helpline">
+        Need an honest space to unmask? Text <strong>HOME</strong> to <strong>741741</strong> or call/text <strong>988</strong>.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    let showsTruth = false;
+
+    function toggleLie() {
+      const label = document.getElementById('label');
+      const content = document.getElementById('content');
+      const box = document.getElementById('scriptBox');
+
+      showsTruth = !showsTruth;
+
+      if (showsTruth) {
+        label.innerText = "What You're Actually Feeling";
+        label.style.color = "#f43f5e";
+        box.style.borderLeftColor = "#f43f5e";
+        content.innerText = "I am completely exhausted from holding myself together, but admitting it feels scarier than carrying it alone.";
+      } else {
+        label.innerText = "What You Say Out Loud";
+        label.style.color = "#2dd4bf";
+        box.style.borderLeftColor = "#2dd4bf";
+        content.innerText = "\"I'm just a little tired today, but I've got a lot going on so it's all good!\"";
+      }
+    }
+  </script>
+
+</body>
+</html>
